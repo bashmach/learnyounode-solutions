@@ -1,7 +1,7 @@
 {
-  "name": "learnyounode-exercises",
+  "name": "learnyounode-solutions",
   "version": "0.1.0",
-  "description": "Exercises for Learn You Node",
+  "description": "Solutions to \"Learn You Node\" workshops",
   "author": "Pavel Machekhin <pavel.machekhin@gmail.com>",
   "license": "MIT",
   "dependencies": {
