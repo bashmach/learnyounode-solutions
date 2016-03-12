@@ -1,7 +1,7 @@
 {
   "name": "learnyounode-solutions",
   "version": "0.1.0",
-  "description": "Solutions to \"Learn You Node\" workshops",
+  "description": "Solutions to \"Learn You Node.js\" workshops",
   "author": "Pavel Machekhin <pavel.machekhin@gmail.com>",
   "license": "MIT",
   "dependencies": {
