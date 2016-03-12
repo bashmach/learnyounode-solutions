@@ -5,6 +5,7 @@
   "author": "Pavel Machekhin <pavel.machekhin@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "bl": "^1.1.2",
     "learnyounode": "^3.4.2"
   }
 }
