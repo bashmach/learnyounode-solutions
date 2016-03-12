@@ -3,5 +3,8 @@
   "version": "0.1.0",
   "description": "Exercises for Learn You Node",
   "author": "Pavel Machekhin <pavel.machekhin@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "learnyounode": "^3.4.2"
+  }
 }
