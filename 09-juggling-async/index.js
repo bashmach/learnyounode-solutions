@@ -4,7 +4,7 @@ const fetch = require('./fetch');
 
 let callbacks = [];
 
-let urls = process.argv.filter(function(url, key) {
+let urls = process.argv.filter(function (url, key) {
   return key > 1;
 });
 
@@ -25,19 +25,21 @@ function resolve(key, data) {
 
 function print() {
   callbacks
-    .sort(function(a, b) {
+    .sort(function (a, b) {
       return a.key > b.key;
     })
-    .forEach(function(item) {
+    .forEach(function (item) {
       console.log(item.content);
     })
 }
 
-urls.forEach(function(url, key) {
+urls.forEach(function (url, key) {
   try {
-    fetch(url, function(data) {
-      resolve(key, data)
-    });
+    let _resolveKey = function (data) {
+      return resolve(key, data);
+    }
+
+    fetch(url, _resolveKey, reject);
   } catch (e) {
     reject(e);
   }

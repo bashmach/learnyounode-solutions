@@ -2,7 +2,7 @@
 
 const http = require('http');
 
-module.exports = function(url, callback) {
+module.exports = function(url, resolve, reject) {
   http.get(url, function(response) {
     let content = '';
 
@@ -12,10 +12,12 @@ module.exports = function(url, callback) {
       content += data;
     });
     response.on('error', function(e) {
-      throw e;
+      reject(e);
     });
     response.on('end', function(e) {
-      callback(content);
+      resolve(content);
     });
-  });
+  }).on('error', function(e) {
+    reject(e);
+  })
 }
